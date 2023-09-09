@@ -1,10 +1,12 @@
-﻿namespace SwiftHR.LeaveManagement.Application.Interfaces.Persistence;
+﻿using SwiftHR.LeaveManagement.Domain.Common;
 
-public interface IGenericRepository<T> where T : class
+namespace SwiftHR.LeaveManagement.Application.Interfaces.Persistence;
+
+public interface IGenericRepository<T> where T : BaseEntity
 {
-    Task<List<T>> GetAllAsync();
+    Task<IReadOnlyList<T>> GetAllAsync();
     Task<T> GetByIdAsync(int id);
-    Task<T> CreateAsync(T entity);
-    Task<T> UpdateAsync(T entity);
-    Task<T> DeleteAsync(T entity);
+    Task CreateAsync(T entity);
+    Task UpdateAsync(T entity);
+    Task DeleteAsync(T entity);
 }
