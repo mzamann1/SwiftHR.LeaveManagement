@@ -9,6 +9,12 @@ internal class UpdateLeaveTypeCommandValidator : AbstractValidator<UpdateLeaveTy
 
     public UpdateLeaveTypeCommandValidator(ILeaveTypeRepository leaveTypeRepository)
     {
+
+        RuleFor(q => q).MustAsync(LeaveTypeNameUnique).WithMessage("Leave type already exists");
+
+        RuleFor(q => q.Id).MustAsync(LeaveTypeMustExists).WithMessage("Leave type doesn't exist with Id:");
+
+
         RuleFor(p => p.Id)
             .NotNull()
             .GreaterThan(0).WithMessage("{PropertyName} must be non negative");
@@ -23,12 +29,6 @@ internal class UpdateLeaveTypeCommandValidator : AbstractValidator<UpdateLeaveTy
         RuleFor(p => p.DefaultDays)
             .GreaterThan(100).WithMessage("{PropertyName} cannot exceed 100 characters")
             .LessThan(1).WithMessage("{PropertyName} must be at least 1 character");
-
-
-        RuleFor(q => q).MustAsync(LeaveTypeNameUnique).WithMessage("Leave type already exists");
-
-        RuleFor(q => q.Id).MustAsync(LeaveTypeMustExists).WithMessage("Leave type doesn't exist with Id:");
-
 
         _leaveTypeRepository = leaveTypeRepository;
     }

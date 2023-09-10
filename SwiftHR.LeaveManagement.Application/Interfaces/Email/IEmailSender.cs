@@ -1,9 +1,8 @@
 ﻿using SwiftHR.LeaveManagement.Application.Models.Email;
 
-namespace SwiftHR.LeaveManagement.Application.Interfaces.Email
+namespace SwiftHR.LeaveManagement.Application.Interfaces.Email;
+
+public interface IEmailSender
 {
-    public interface IEmailSender
-    {
-        Task<bool> SendEmail(EmailMessage email);
-    }
+    Task<bool> SendEmail(EmailMessage email);
 }
