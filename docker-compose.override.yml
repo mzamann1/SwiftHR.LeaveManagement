@@ -1,0 +1,36 @@
+version: '3.4'
+
+services:
+
+  pgadmin-swift:
+     container_name: pgadmin-swift
+     environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@aspnetrun.com
+      - PGADMIN_DEFAULT_PASSWORD=admin1234
+      - POSTGRES_DB=SampleDatabase
+     restart: always
+     ports:
+      - "5050:80"
+     volumes:
+      - pgadmin_data:/root/.pgadmin
+
+  portainer-swift:
+    container_name: portainer-swift
+    restart: always
+    ports:
+      - "8080:8000"
+      - "9000:9000"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer_data:/data
+  swiftdb:
+    container_name: swiftdb
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=adminadmin
+      - POSTGRES_DB=SampleDatabase
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/

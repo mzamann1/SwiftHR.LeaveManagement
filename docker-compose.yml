@@ -1,0 +1,18 @@
+version: '3.4'
+
+
+services:
+    
+  swiftdb:
+    image: postgres:latest
+
+  pgadmin-swift:
+    image: dpage/pgadmin4
+
+  portainer-swift:
+    image: portainer/portainer-ce
+        
+volumes:
+  portainer_data:
+  postgres_data:
+  pgadmin_data:

@@ -15,13 +15,33 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{A434ADF7-8B56-42C0-80D8-ACF4B94DDA67}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwiftHR.LeaveManagement.Domain", "SwiftHR.LeaveManagement.Domain\SwiftHR.LeaveManagement.Domain.csproj", "{F6FC7F9C-0D96-4871-A9FF-79632D0C53D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwiftHR.LeaveManagement.Domain", "src\SwiftHR.LeaveManagement.Domain\SwiftHR.LeaveManagement.Domain.csproj", "{F6FC7F9C-0D96-4871-A9FF-79632D0C53D1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwiftHR.LeaveManagement.Application", "SwiftHR.LeaveManagement.Application\SwiftHR.LeaveManagement.Application.csproj", "{F65349B2-9CE7-4E1C-9258-F56228AF7137}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwiftHR.LeaveManagement.Application", "src\SwiftHR.LeaveManagement.Application\SwiftHR.LeaveManagement.Application.csproj", "{F65349B2-9CE7-4E1C-9258-F56228AF7137}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwiftHR.LeaveManagement.Persistence", "SwiftHR.LeaveManagement.Persistence\SwiftHR.LeaveManagement.Persistence.csproj", "{8F7D0D47-6F29-49A9-A953-123BC0C88D7B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwiftHR.LeaveManagement.Persistence", "src\SwiftHR.LeaveManagement.Persistence\SwiftHR.LeaveManagement.Persistence.csproj", "{8F7D0D47-6F29-49A9-A953-123BC0C88D7B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwiftHR.LeaveManagement.Infrastructure", "SwiftHR.LeaveManagement.Infrastructure\SwiftHR.LeaveManagement.Infrastructure.csproj", "{4522A925-91AD-4D9E-A0DC-05AD1679D9F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwiftHR.LeaveManagement.Infrastructure", "src\SwiftHR.LeaveManagement.Infrastructure\SwiftHR.LeaveManagement.Infrastructure.csproj", "{4522A925-91AD-4D9E-A0DC-05AD1679D9F4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwiftHR.LeaveManagement.API", "src\SwiftHR.LeaveManagement.API\SwiftHR.LeaveManagement.API.csproj", "{0408D283-90E1-4DAA-BECC-04734A9A6518}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6A411ABD-48D5-48F8-A639-832E7EAF66DD}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.override.yml = docker-compose.override.yml
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{B0733F7C-45DC-4108-9DB4-6F8860AC3841}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IntegrationTests", "IntegrationTests", "{B83877B4-E1AF-44D6-94F6-A0B4A7FAF20F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwiftHR.LeaveManagement.Persistence.IntegrationTests", "tests\IntegrationTests\SwiftHR.LeaveManagement.Persistence.IntegrationTests\SwiftHR.LeaveManagement.Persistence.IntegrationTests.csproj", "{7BD09980-C708-4E84-97B3-D2F75A67A830}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Swift.LeaveManagement.Application.UnitTest", "tests\UnitTests\Swift.LeaveManagement.Application.UnitTest\Swift.LeaveManagement.Application.UnitTest.csproj", "{BA0FF499-E374-457C-859A-A980A90B9168}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwiftHR.LeaveManagement.Identity", "src\SwiftHR.LeaveManagement.Identity\SwiftHR.LeaveManagement.Identity.csproj", "{A52641DB-38A1-49D2-BEFB-DFC43001A2B9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwiftHR.LeaveManagement.BlazorUI", "src\SwiftHR.LeaveManagement.BlazorUI\SwiftHR.LeaveManagement.BlazorUI.csproj", "{C3BC2CD3-3D0C-43B3-8B0B-E5D86E618C30}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +65,26 @@ Global
 		{4522A925-91AD-4D9E-A0DC-05AD1679D9F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4522A925-91AD-4D9E-A0DC-05AD1679D9F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4522A925-91AD-4D9E-A0DC-05AD1679D9F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0408D283-90E1-4DAA-BECC-04734A9A6518}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0408D283-90E1-4DAA-BECC-04734A9A6518}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0408D283-90E1-4DAA-BECC-04734A9A6518}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0408D283-90E1-4DAA-BECC-04734A9A6518}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BD09980-C708-4E84-97B3-D2F75A67A830}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BD09980-C708-4E84-97B3-D2F75A67A830}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BD09980-C708-4E84-97B3-D2F75A67A830}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BD09980-C708-4E84-97B3-D2F75A67A830}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA0FF499-E374-457C-859A-A980A90B9168}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA0FF499-E374-457C-859A-A980A90B9168}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA0FF499-E374-457C-859A-A980A90B9168}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA0FF499-E374-457C-859A-A980A90B9168}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A52641DB-38A1-49D2-BEFB-DFC43001A2B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A52641DB-38A1-49D2-BEFB-DFC43001A2B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A52641DB-38A1-49D2-BEFB-DFC43001A2B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A52641DB-38A1-49D2-BEFB-DFC43001A2B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3BC2CD3-3D0C-43B3-8B0B-E5D86E618C30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3BC2CD3-3D0C-43B3-8B0B-E5D86E618C30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3BC2CD3-3D0C-43B3-8B0B-E5D86E618C30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3BC2CD3-3D0C-43B3-8B0B-E5D86E618C30}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,6 +98,13 @@ Global
 		{F65349B2-9CE7-4E1C-9258-F56228AF7137} = {518C6751-6516-4DC2-8B31-D06DE3CA858B}
 		{8F7D0D47-6F29-49A9-A953-123BC0C88D7B} = {7EEC0B0B-801C-46FA-9E49-CF266AF8019A}
 		{4522A925-91AD-4D9E-A0DC-05AD1679D9F4} = {7EEC0B0B-801C-46FA-9E49-CF266AF8019A}
+		{0408D283-90E1-4DAA-BECC-04734A9A6518} = {A434ADF7-8B56-42C0-80D8-ACF4B94DDA67}
+		{B0733F7C-45DC-4108-9DB4-6F8860AC3841} = {D19ADEC9-51C7-4418-A9B6-4E6C0FF88F3D}
+		{B83877B4-E1AF-44D6-94F6-A0B4A7FAF20F} = {D19ADEC9-51C7-4418-A9B6-4E6C0FF88F3D}
+		{7BD09980-C708-4E84-97B3-D2F75A67A830} = {B83877B4-E1AF-44D6-94F6-A0B4A7FAF20F}
+		{BA0FF499-E374-457C-859A-A980A90B9168} = {B0733F7C-45DC-4108-9DB4-6F8860AC3841}
+		{A52641DB-38A1-49D2-BEFB-DFC43001A2B9} = {7EEC0B0B-801C-46FA-9E49-CF266AF8019A}
+		{C3BC2CD3-3D0C-43B3-8B0B-E5D86E618C30} = {9869F704-C3F6-4A30-9B97-8BFE6DD9360A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EB32008C-0903-45E0-AFC3-E04BDC18A51E}
